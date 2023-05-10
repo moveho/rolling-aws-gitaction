@@ -27,9 +27,9 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.AWS_USERNAME }}
-        password: ${{ secrets.AWS_PASSWORD}}
-        # key: ${{ secrets.SSH_PRIVATE_KEY }}
+        # username: ${{ secrets.AWS_USERNAME }}
+        # password: ${{ secrets.AWS_PASSWORD}}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd /home/ubuntu/aws-gitaction-rolling     # EC2에서 실행할 스크립트 작성
