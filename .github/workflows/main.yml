@@ -33,6 +33,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd /home/ubuntu/aws-gitaction-rolling     # EC2에서 실행할 스크립트 작성
+          docker rmi moveho/node-front:1.0
           docker-compose down		
           docker network rm aws-gitaction-rolling_rolling-be-db aws-gitaction-rolling_rolling-fe-be 
           docker-compose up -d
