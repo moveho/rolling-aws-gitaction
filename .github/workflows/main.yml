@@ -36,5 +36,6 @@ jobs:
           docker rmi moveho/node-front:1.0
           docker-compose down		
           docker network rm aws-gitaction-rolling_rolling-be-db aws-gitaction-rolling_rolling-fe-be 
+          docker pull moveho/node-front:1.0
           docker-compose up -d
         timeout: 1m
