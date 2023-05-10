@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: self-hosted          # git runner를 설정해서 self-hosted 기반 서버
+    runs-on: ubuntu-20.04          # git runner를 설정해서 self-hosted 기반 서버
     timeout-minutes: 20           # timeout 옵션을 넣어서 충분한 시간 제공
     steps:
     - name: Checkout
